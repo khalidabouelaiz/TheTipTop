@@ -10,25 +10,6 @@ const Lot = require('../BackEnd/models/lotModel');
 const Role = require('../BackEnd/models/roleModel');
 const mongoose = require('mongoose');
 
-describe('Email Controller', () => {
-    // Increase the timeout value to 10 seconds
-    jest.setTimeout(100000);
-    afterAll(async () => {
-      // delete all documents inside users collection
-      await User.deleteMany({});
-      
-      // delete all documents inside emails collection
-      await Email.deleteMany({});
-      
-      // delete all documents inside tickets collection
-      await Ticket.deleteMany({});
-      
-      // delete all documents inside lots collection
-      await Lot.deleteMany({});
-      
-      // delete all documents inside roles collection
-      await Role.deleteMany({});
-    });
 
 
   // test /email
