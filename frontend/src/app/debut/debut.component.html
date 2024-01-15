@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="concours de thé, jeu de thé, thé, concours"
+    />
+    <meta
+      name="description"
+      content="Participez à notre jeu de concours de thé pour gagner des cadeaux incroyables."
+    />
+    <title>The Tip Top</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light custom-bg fixed-top">
+      <div class="container">
+        <a class="navbar-brand custom-color">Jeu Concours de Thé</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link custom-color align-center" (click)="onLog()"
+                > <i class="material-icons">person</i>&nbsp;&nbsp;Se connecter</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-color align-center" (click)="onInsc()"
+                > <i class="material-icons">person_add</i>&nbsp;&nbsp;Inscription</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link custom-color align-center" (click)="onabout()"> <i class="material-icons">info</i>&nbsp;&nbsp;À propos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+
+    <main>
+      <section class="hero">
+        <h1>Participez pour avoir la chance de gagner un an de thé d'une</h1>
+
+        <h1>valeur de 360€ !!</h1>
+
+        <p>
+          Participez dès maintenant à notre jeu concours pour tenter de
+          remporter une année de thé d'une valeur de 360€ ! Ne manquez pas cette
+          opportunité et inscrivez-vous dès maintenant pour tenter votre chance
+          .
+        </p>
+        <a (click)="onInsc()" class="button">Inscrivez-vous maintenant !</a>
+      </section>
+
+      <section class="features">
+        <h2>Pourquoi participer ?</h2>
+        <ul>
+          <li>
+            Participez pour avoir la chance de remporter un magnifique lot
+            comprenant un coffret découverte d'une valeur de 69€, un coffret
+            découverte d'une valeur de 39€, une boite de 100g d'un thé
+            signature, une boite de 100g d'un thé détox ou d'infusion, ainsi
+            qu'un infuseur à thé !
+          </li>
+          <li>Découvrez notre sélection de thés exceptionnels.</li>
+          <li>Recevez des offres exclusives et des promotions.</li>
+          <li>Apprenez-en plus sur l'histoire du thé.</li>
+        </ul>
+      </section>
+      <div class="aze" style="overflow: auto">
+        <div class="azre">
+          <img class="azre1" type="image" [src]="det" alt="detox de thé" />
+          <span class="azre-title">Detox de thé</span>
+        </div>
+        <div class="azre">
+          <img class="azre2" [src]="six" alt="bon d'achat de thé 69 euro" />
+          <span class="azre-title">Bon d'achat de thé 69 euro</span>
+        </div>
+        <div class="azre">
+          <img class="azre3" [src]="sign" alt="signature de thé" />
+          <span class="azre-title">Signature de thé</span>
+        </div>
+        <div class="azre">
+          <img class="azre4" [src]="troi" alt="bon d'achat de thé 39 euro" />
+          <span class="azre-title">Bon d'achat de thé 39 euro</span>
+        </div>
+        <div class="azre">
+          <img class="azre5" [src]="infus" alt="infussion de thé" />
+          <span class="azre-title">Infusion de thé</span>
+        </div>
+      </div>
+       <section class="contest-info">
+        <div>
+          <h2>Comment Participer</h2>
+          <ul>
+            <li>
+              Pour vous joindre à l'aventure, munissez-vous simplement d'un
+              ticket de caisse ou d'une facture excédant 49€, arborant un numéro
+              à 10 chiffres.
+            </li>
+            <li>
+              Laissez-vous emporter pendant 30 jours d'excitation et de
+              suspense.
+            </li>
+            <li>Un maximum de 1 500 000 tickets sera généreusement réparti.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Distribution des Tickets</h2>
+          <ul>
+            <li>
+              Chaque ticket est une promesse de victoire, détaillée comme suit :
+              <ul>
+                <li>60% offrent un élégant infuseur à thé.</li>
+                <li>
+                  20% réservent une boîte de 100g d’un thé détox ou d’infusion.
+                </li>
+                <li>
+                  10% vous dévoilent une boîte de 100g d’un thé signature.
+                </li>
+                <li>
+                  6% vous font découvrir un coffret découverte d’une valeur de
+                  39€.
+                </li>
+                <li>
+                  4% vous offrent l'expérience exceptionnelle d'un coffret
+                  découverte d’une valeur de 69€.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2>Utilisation du Ticket</h2>
+          <p>
+            Explorez votre chance en testant votre numéro sur notre site dans
+            les 30 jours suivant la clôture, et gagnez en magasin ou en ligne.
+          </p>
+          <h2>Règlement et Contrôle</h2>
+          <p>
+            Les règles du jeu et les détails ont été déposés entre les mains
+            expertes de Maître Arnaud Rick, huissier de justice. Le tirage au
+            sort du gros lot sera également effectué sous sa surveillance
+            attentive.
+          </p>
+        </div>
+
+        <div>
+          <h2>Conditions d'utilisation</h2>
+          <ul>
+            <li>
+              Chaque ticket révèle ses mystères une seule fois. Réclamez vos
+              gains intermédiaires en magasin ou en ligne.
+            </li>
+            <li>
+              À la fin de cette aventure, un tirage au sort parmi tous les
+              participants décidera du chanceux qui remportera un an de thé
+              d’une valeur de 360€.
+            </li>
+            <li>
+              Pour le tirage au sort du gros lot, sachez que le nombre de
+              participations n'accroît pas les chances de victoire. Tous les
+              tickets, couronnés de succès pour les lots intermédiaires, font de
+              chaque participation une progression vers plus de récompenses.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2>Les gagnants précédents témoignent</h2>
+        <ul>
+          <li>
+            <img [src]="hom" alt="Témoignage 1" />
+            <div class="stars">
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+            </div>
+            <p>
+              "Je suis ravi d'avoir gagné un an d'une valeur de 360€ de thé
+              gratuit ! Je suis devenu un fan inconditionnel de la sélection de
+              thés de cette entreprise."
+            </p>
+            <cite>John Doe</cite>
+          </li>
+          <li>
+            <img [src]="fem" alt="Témoignage 2" />
+            <div class="stars">
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+              <svg
+                class="star-svg gold"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"
+                />
+              </svg>
+            </div>
+            <p>
+              "Je ne connaissais pas cette entreprise avant de participer au jeu
+              concours. Maintenant, je suis un client fidèle et je recommande
+              vivement leurs thés."
+            </p>
+            <cite>Cloee Doe</cite>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-left">
+          <p>&copy; 2023 Entreprise de ThéTopTop. Tous droits réservés.</p>
+        </div>
+        <div class="footer-right">
+          <p>
+            Politique de confidentialité | Mentions légales | Politique des
+            cookies
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+@charset "UTF-8";
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f4f0;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Ajustez la taille de l'icône selon vos besoins */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+.star-svg {
+  fill: gray;
+  width: 1em; /* Ajustez la taille des étoiles selon vos besoins */
+  height: 1em;
+  cursor: pointer;
+  margin: 0.0625rem;
+}
+
+.star-svg.gold {
+  fill: #ffdc0f;
+}
+
+.custom-bg {
+  background-color: #5e493a;
+}
+.custom-color {
+  color: white !important;
+}
+
+/* Hero section */
+.hero {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('https://anatae.fr/cdn/shop/articles/the-seche-2.jpg?v=1674670046');
+  background-size: cover;
+  color: #f8f4f0;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: #9b786f;
+  color: #f8f4f0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #725843;
+}
+
+/* Features section */
+.features {
+  background-color: #f8f4f0;
+  color: #333;
+  padding: 2rem;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+h2 {
+  text-align: center;
+}
+
+.features ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+/* Testimonials section */
+.testimonials {
+  background-color: #f8f4f0;
+  color: #333;
+  padding: 2rem;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.testimonials ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.testimonials li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.testimonials img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.testimonials p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.testimonials cite {
+  font-style: italic;
+}
+.aze {
+  display: flex;
+  overflow: hidden;
+  background-color: #f8f4f0;
+  position: relative;
+}
+
+.azre {
+  position: relative;
+}
+
+.azre1,
+.azre2,
+.azre3,
+.azre4,
+.azre5 {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+}
+
+.azre-title {
+  margin-left: 10%;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.azre:hover .azre-title {
+  transform: translateY(+100px);
+}
+
+footer {
+  background-color: #5e493a;
+  color: #ffffff;
+
+  font-size: 0.5cm;
+  text-align: center;
+}
+.contest-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contest-info h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contest-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contest-info li {
+  margin-bottom: 10px;
+}
+
+.contest-info p {
+  line-height: 1.6;
+}
+
+.contest-info > div {
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #f5f5f5;
+}
+

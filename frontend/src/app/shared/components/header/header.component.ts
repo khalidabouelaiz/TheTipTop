@@ -1,29 +1,23 @@
-import { Component, OnInit,Output, EventEmitter } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router, UrlTree } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.less']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
-  constructor(public router:Router) { }
+  constructor(public router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  ondeco() {
+    this.router.navigate(['/login']);
   }
-   Signout(){
-      this.router.navigate(['/home']);
-      localStorage.removeItem('TokenAdmin');
-      localStorage.removeItem('TokenEmployer');
-      localStorage.removeItem('TokenUser');
-   }
+
   toggleSideBar() {
     this.toggleSideBarForMe.emit();
     setTimeout(() => {
-      window.dispatchEvent(
-        new Event('resize')
-      );
+      window.dispatchEvent(new Event('resize'));
     }, 300);
   }
 }

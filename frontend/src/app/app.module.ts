@@ -1,115 +1,116 @@
+import { NgModule, ViewChild, ElementRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { NgxWheelModule } from 'projects/ngx-wheel/src/public-api';
 import { AppRoutingModule } from './app-routing.module';
-import { CeleComponent } from '../cele/cele.component';
 import { AppComponent } from './app.component';
-import { RoueComponent } from 'src/roue/roue.component';
-import {ServiceService} from 'src/service/service.service'
-import{HttpClientModule} from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule, NgForm } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { DashboardComponent } from '../dashboard/dashboard.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
-import { LogoutComponent } from './pageNotfound/logout.component';
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations"; 
 import { RouterModule } from '@angular/router';
-import {FormsModule,ReactiveFormsModule} from "@angular/forms";
-import { NgxSpinnerModule } from "ngx-spinner";
-import { EmployerComponent } from 'src/employer/employer.component';
-import { Ng2SearchPipeModule } from "ng2-search-filter";
-import { SubscribeComponent } from 'src/subscribe/subscribe.component';
-import { CookieService } from 'ngx-cookie-service';
-import { MatDividerModule } from "@angular/material/divider";
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import {MatCardModule} from '@angular/material/card';
- import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
-import {MatButtonModule} from '@angular/material/button';
-import {MatGridListModule} from '@angular/material/grid-list';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatListModule } from '@angular/material/list';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { HighchartsChartModule } from 'highcharts-angular';
+import { DashbComponent } from './dashb/dashb.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { SharkDirective } from './shark.directive';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { AdminComponent } from './admin/admin.component';
 import { DefaultModule } from './adminn/default/default.module';
-import { SharedModule} from './shared/shared/shared.module';
-import { AddempolyerComponent } from './adminn/addempolyer/addempolyer.component';
-import { UserComponent } from 'src/user/user.component';
-import { NgToastModule } from 'ng-angular-popup';
-import { HomeComponent } from './home/home/home.component';
-
-
-
-
-
-
-
-
-
+import { SocialAuthServiceConfig } from 'angularx-social-login';
+import {
+  SocialLoginModule,
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+} from 'angularx-social-login';
+import { HomeClientComponent } from './home-client/home-client.component';
+import { HomeClientnumComponent } from './home-clientnum/home-clientnum.component';
+import { MailModalComponent } from './mail/mail.component';
+import { AcceuilComponent } from './acceuil/acceuil.component';
+import { DebutComponent } from './debut/debut.component';
+import { EmployerComponent } from './employer/employer.component';
+import { CreateCreationemployerComponent } from './create-creationemployer/create-creationemployer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CeleComponent,
-    RoueComponent,
-    SidenavComponent,
-    DashboardComponent,
-    AboutusComponent,
-    LogoutComponent,
-    EmployerComponent,
-    SubscribeComponent,
     LoginComponent,
     SignUpComponent,
-    AddempolyerComponent,
-    UserComponent,
-    HomeComponent,
-    
-    
-  
-    
-    
-  
-    
-   
-   
-    
+    DashbComponent,
+    SharkDirective,
+    AboutUsComponent,
+    AdminComponent,
+    HomeClientComponent,
+    HomeClientnumComponent,
+    MailModalComponent,
+    AcceuilComponent,
+    DebutComponent,
+    EmployerComponent,
+    CreateCreationemployerComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
-    NgxWheelModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
     RouterModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     FormsModule,
-    NgxSpinnerModule, 
-    Ng2SearchPipeModule,
-    MatDividerModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
     MatButtonModule,
     MatGridListModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatMenuModule,
-    MatListModule,
-    MatSidenavModule,
-    FlexLayoutModule,
-    HighchartsChartModule ,
-    ReactiveFormsModule,
-    SharedModule,
-    DefaultModule ,
-    NgToastModule
+    NgxPaginationModule,
+    NgbModule,
+    DefaultModule,
+    SocialLoginModule,
   ],
-  providers: [ServiceService,CookieService],
-  bootstrap: [AppComponent]
+  providers: [
+    NgbActiveModal,
+    {
+      provide: 'SocialAuthServiceConfig',
+
+      useValue: {
+        autoLogin: false,
+
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+
+            provider: new GoogleLoginProvider(
+              '146598031305-pie5o5fj58bkcqmmib0tra0dgqgsr17p.apps.googleusercontent.com'
+            ),
+          },
+        ],
+        onError: (err) => {
+          console.error(err);
+        },
+      } as SocialAuthServiceConfig,
+    },
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('1173357356591712'),
+          },
+        ],
+        onError: (err) => {
+          console.error(err);
+        },
+      } as SocialAuthServiceConfig,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
