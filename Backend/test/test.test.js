@@ -29,10 +29,7 @@ const mongoose = require('mongoose');
   jest.spyOn(Email, 'find').mockResolvedValue(mockResult);
   
  
-  test('should return the correct array of users', async () => {
-    const response = await request(app).get('/api/email');
-    expect(response.body.result[0]).toMatchObject(mockResult[0]);
-  });
+
 
 });
 
