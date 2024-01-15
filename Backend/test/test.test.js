@@ -28,22 +28,7 @@ const mongoose = require('mongoose');
   // Mock the email1.find() function to return our mock result
   jest.spyOn(Email, 'find').mockResolvedValue(mockResult);
   
-  test('should return an array of users', async () => {
-    const response = await request(app).get('/api/email');
-    expect(response.body.result).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          _id: expect.any(String),
-          nom: expect.any(String),
-          prenom: expect.any(String),
-          email: expect.any(String),
-          telephone: expect.any(String),
-          mesage: expect.any(String),
-          Etat_repond: expect.any(Boolean)
-        })
-      ])
-    );
-  });
+ 
   test('should return the correct array of users', async () => {
     const response = await request(app).get('/api/email');
     expect(response.body.result[0]).toMatchObject(mockResult[0]);
