@@ -12,26 +12,7 @@ const mongoose = require('mongoose');
 
 
 
-  // test /email
-  const mockResult = [
-      {
-        _id: '123',
-        nom: 'John',
-        prenom: 'Doe',
-        email: 'john.doe@example.com',
-        telephone: '555-555-5555',
-        mesage: 'Hello World!',
-        Etat_repond: true
-      }
-    ];
-
-  // Mock the email1.find() function to return our mock result
-  jest.spyOn(Email, 'find').mockResolvedValue(mockResult);
-  
  
-
-
-});
 
 
 describe('User Controller', () => {
